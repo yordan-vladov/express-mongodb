@@ -1,5 +1,4 @@
 const express = require("express");
-const Movie = require("../models/movie.model.js");
 const router = express.Router();
 const { getMovies, getMovie, createMovie, updateMovie, deleteMovie } = require('../controllers/movie.controller.js');
 

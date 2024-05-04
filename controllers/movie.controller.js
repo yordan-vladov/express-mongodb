@@ -1,4 +1,3 @@
-const { ObjectId } = require('mongodb');
 const Movie = require('../models/movie.model');
 
 const getMovies = async (req, res) => {
