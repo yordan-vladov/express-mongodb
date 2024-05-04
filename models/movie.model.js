@@ -59,6 +59,11 @@ const MovieSchema = mongoose.Schema(
             required: true,
             default: []
         },
+        languages: {
+            type: [String],
+            required: true,
+            default: []
+        },
         num_mflix_comments: {
             type: Number,
             required: false
@@ -69,6 +74,7 @@ const MovieSchema = mongoose.Schema(
         },
         awards: {
             type: {
+                _id: false,
                 nominations: Number,
                 wins: Number,
                 text: String
@@ -82,13 +88,15 @@ const MovieSchema = mongoose.Schema(
         },
         imdb: {
             type: {
+                _id: false,
                 rating: Number,
                 votes: Number,
                 id: Number
             },
-            required: true
+            required: true,
         },
         tomatoes: {
+            _id: false,
             boxOffice: String,
             consensus: String,
             critic: {

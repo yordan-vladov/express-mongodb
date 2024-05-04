@@ -1,3 +1,4 @@
+const { ObjectId } = require('mongodb');
 const Movie = require('../models/movie.model');
 
 const getMovies = async (req, res) => {
@@ -50,7 +51,6 @@ const updateMovie = async (req, res) => {
 const deleteMovie = async (req, res) => {
     try {
         const { id } = req.params;
-
         const movie = await Movie.findByIdAndDelete(id);
 
         if (!movie) {
